@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="javascript/jquery.js"></script>
+    <script>
+        var winWidth=$(window).width();
+        $('html').css({
+            fontSize:winWidth/750*100+'px'
+        });
+    </script>
+    <title>重置密码</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header pr">
+            <a class="icon-return" href="reset1.html"></a>
+            <p>重置密码</p>
+        </div>
+        <form>
+            <div class="group">
+                <p class="name item"><span>姓名</span><input id="name" type="text" name="" placeholder="请输入姓名"/></p>
+                <p class="idcard item"><span>身份证号</span><input id="idCard" type="text" name="" placeholder="请输入身份证号"/></p>
+            </div>
+            <div class="group">
+                <p class="phonenum item">188****9837</p>
+                <div class="nums item">
+                    <div class="fl">
+                        <input id="nums-input" type="text" name="" placeholder="请输入验证码" />
+                    </div>
+                    <div class="fl">
+                        <a href="javascript:;" id="getNum" class="btn">获取验证码</a>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <p class="password item"><span>设置新密码</span><input id="pass" type="password" name="" placeholder="请输入密码"/></p>
+                <p class="repassword item"><span>重新输入密码</span><input id="repass" type="password" name="" placeholder="请重新输入密码"/></p>
+            </div>
+            <div class="subm reset">
+                <input id="subm" type="button" value="提交">
+            </div>
+        </form>
+    </div>
+    <!--模态框 重置失败-->
+    <div class="modal-bg pa none fail">
+        <div class="modal-box">
+            <div class="modal-title">
+                <div class="clearfix box">
+                    <i class="icon icon-logo fl"></i>账号提示
+                </div>
+            </div>
+            <div class="modal-content">
+                <p>尊敬的用户您好，您重置宽带账号密码重置失败</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal_close" type="button">确定</button>
+            </div>
+        </div>
+    </div>
+    <!--模态框 账号密码输入错误-->
+    <div class="modal-bg pa none wr">
+        <div class="modal-box">
+            <div class="modal-title">
+                <div class="clearfix box">
+                    <i class="icon icon-logo fl"></i>账号提示
+                </div>
+            </div>
+            <div class="modal-content">
+                <p>尊敬的用户您好，您输入宽带账号密码输入错误</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal_close" type="button">确定</button>
+            </div>
+        </div>
+    </div>
+    <!--模态框 重置成功-->
+    <div class="modal-bg pa none suc">
+        <div class="modal-box">
+            <div class="modal-title">
+                <div class="clearfix box">
+                    <i class="icon icon-logo fl"></i>账号提示
+                </div>
+            </div>
+            <div class="modal-content">
+                <p>尊敬的用户您好，您输入宽带账号密码已重置成功</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal_close" type="button">确定</button>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/main.js"></script>
+</body>
+</html>
